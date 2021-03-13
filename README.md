@@ -1,6 +1,6 @@
 # Tool-Drops
 
-A fabric mod that allows you to configure loot tables for the event of an item breaking due to durability.
+A fabric mod that allows you to configure loot tables for when an item breaks due to durability.
 
 Example: if you want a wooden hoe to drop 2 sticks when it breaks, create the file "config/tool drops/loot tables/item.minecraft.wooden_hoe.json"
 
