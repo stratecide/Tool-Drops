@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "tooldrops",
+  "version": "${version}",
+
+  "name": "Tool Drops",
+  "description": "If a tool (or anything with durability probably) breaks, it can drop loot",
+  "authors": [
+    "stratecide"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/tooldrops/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.tool.drops.ToolDropsMod"
+    ]
+  },
+  "mixins": [
+    "tooldrops.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
