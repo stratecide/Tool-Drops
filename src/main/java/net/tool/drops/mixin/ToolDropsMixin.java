@@ -26,7 +26,8 @@ import java.util.function.Consumer;
 @Mixin(ItemStack.class)
 public abstract class ToolDropsMixin {
 
-    @Shadow public abstract String getTranslationKey();
+    @Shadow
+    public abstract String getTranslationKey();
 
     @Inject(method = "damage(ILjava/util/Random;Lnet/minecraft/server/network/ServerPlayerEntity;)Z", at = @At(value = "RETURN", ordinal = 2))
     public void damage(int amount, Random random, ServerPlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
