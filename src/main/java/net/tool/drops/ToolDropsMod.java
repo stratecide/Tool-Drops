@@ -1,11 +1,11 @@
 package net.tool.drops;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.loot.LootGsons;
 import net.minecraft.loot.LootTable;
+import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,5 +24,9 @@ public class ToolDropsMod implements ModInitializer {
 			LootTable lootTable = GSON.fromJson(lootTableData.get(key), LootTable.class);
 			lootTables.put(key, lootTable);
 		}
+	}
+
+	public static String identifierToString(Identifier identifier) {
+		return identifier.toString().replace(":", ".");
 	}
 }

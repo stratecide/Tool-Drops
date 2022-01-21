@@ -5,7 +5,6 @@ import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
 
 public class ToolDropsConfig {
@@ -29,7 +28,7 @@ public class ToolDropsConfig {
                 StringBuilder builder = new StringBuilder();
                 while (scanner.hasNextLine())
                     builder.append(scanner.nextLine());
-                result.put(file.getName().substring(0, file.getName().length() - 5), new JsonParser().parse(builder.toString()).getAsJsonObject());
+                result.put(file.getName().substring(0, file.getName().length() - 5), JsonParser.parseString(builder.toString()).getAsJsonObject());
             }
             catch (FileNotFoundException e) {
                 e.printStackTrace();
